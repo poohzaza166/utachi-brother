@@ -1,0 +1,768 @@
+2022-11-04 03:57:33,529 - discord.client - INFO - logging in using static token 
+2022-11-04 03:57:34,378 - discord.gateway - INFO - Shard ID None has sent the IDENTIFY payload. 
+2022-11-04 03:57:34,683 - discord.gateway - INFO - Shard ID None has connected to Gateway: ["gateway-prd-us-east1-b-ffxs",{"micros":40927,"calls":["id_created",{"micros":909,"calls":[]},"session_lookup_time",{"micros":292,"calls":[]},"session_lookup_finished",{"micros":10,"calls":[]},"discord-sessions-blue-prd-2-274",{"micros":38387,"calls":["start_session",{"micros":35654,"calls":["discord-api-855c97f47c-r9cdf",{"micros":31713,"calls":["get_user",{"micros":6602},"get_guilds",{"micros":3883},"send_scheduled_deletion_message",{"micros":12},"guild_join_requests",{"micros":245},"authorized_ip_coro",{"micros":12}]}]},"starting_guild_connect",{"micros":68,"calls":[]},"presence_started",{"micros":317,"calls":[]},"guilds_started",{"micros":169,"calls":[]},"guilds_connect",{"micros":2,"calls":[]},"presence_connect",{"micros":2156,"calls":[]},"connect_finished",{"micros":2160,"calls":[]},"build_ready",{"micros":16,"calls":[]},"optimize_ready",{"micros":0,"calls":[]},"split_ready",{"micros":1,"calls":[]},"clean_ready",{"micros":0,"calls":[]}]}]}] (Session ID: 366b63bf36fd4bda14c974b7c3ddd08f). 
+2022-11-04 03:57:36,872 - src.fio_log - INFO - base class online 
+2022-11-04 03:58:26,080 - discord.gateway - WARNING - Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 52, in <module>
+    run()
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 49, in run
+    client.run(botconfig['bot_setting']['bottoken'])
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 707, in run
+    loop.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 377, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 1141, in on_interaction
+    await self.process_application_commands(interaction)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 822, in process_application_commands
+    await self.invoke_application_command(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 1088, in invoke_application_command
+    await ctx.command.invoke(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 374, in invoke
+    await injected(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 124, in wrapped
+    ret = await coro(arg)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 974, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 40, in gen
+    img = gen_waifu(query=query,num_inference_steps=num_inference_steps,seed=seed,guidance_scale=guidance_scale)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/waifu_gen.py", line 13, in gen_waifu
+    pipe = StableDiffusionPipeline.from_pretrained(
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/pipeline_utils.py", line 517, in from_pretrained
+    loaded_sub_model = load_method(os.path.join(cached_folder, name), **loading_kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/modeling_utils.py", line 427, in from_pretrained
+    state_dict = load_state_dict(model_file)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/modeling_utils.py", line 71, in load_state_dict
+    return torch.load(checkpoint_file, map_location="cpu")
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/serialization.py", line 789, in load
+    return _load(opened_zipfile, map_location, pickle_module, **pickle_load_args)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/serialization.py", line 1131, in _load
+    result = unpickler.load()
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/serialization.py", line 1101, in persistent_load
+    load_tensor(dtype, nbytes, key, _maybe_decode_ascii(location))
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/serialization.py", line 1079, in load_tensor
+    storage = zip_file.get_storage_from_record(name, numel, torch.UntypedStorage).storage().untyped()
+ 
+2022-11-04 03:58:36,181 - discord.gateway - WARNING - Shard ID None heartbeat blocked for more than 20 seconds.
+Loop thread traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 52, in <module>
+    run()
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 49, in run
+    client.run(botconfig['bot_setting']['bottoken'])
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 707, in run
+    loop.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 377, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 1141, in on_interaction
+    await self.process_application_commands(interaction)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 822, in process_application_commands
+    await self.invoke_application_command(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 1088, in invoke_application_command
+    await ctx.command.invoke(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 374, in invoke
+    await injected(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 124, in wrapped
+    ret = await coro(arg)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 974, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 40, in gen
+    img = gen_waifu(query=query,num_inference_steps=num_inference_steps,seed=seed,guidance_scale=guidance_scale)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/waifu_gen.py", line 13, in gen_waifu
+    pipe = StableDiffusionPipeline.from_pretrained(
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/pipeline_utils.py", line 517, in from_pretrained
+    loaded_sub_model = load_method(os.path.join(cached_folder, name), **loading_kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2184, in from_pretrained
+    state_dict = load_state_dict(resolved_archive_file)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/transformers/modeling_utils.py", line 399, in load_state_dict
+    return torch.load(checkpoint_file, map_location="cpu")
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/serialization.py", line 789, in load
+    return _load(opened_zipfile, map_location, pickle_module, **pickle_load_args)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/serialization.py", line 1131, in _load
+    result = unpickler.load()
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/serialization.py", line 1103, in persistent_load
+    return loaded_storages[key]
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/serialization.py", line 1082, in load_tensor
+    loaded_storages[key] = torch.storage.TypedStorage(
+ 
+2022-11-04 03:58:46,241 - discord.gateway - WARNING - Shard ID None heartbeat blocked for more than 30 seconds.
+Loop thread traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 52, in <module>
+    run()
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 49, in run
+    client.run(botconfig['bot_setting']['bottoken'])
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 707, in run
+    loop.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 377, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 1141, in on_interaction
+    await self.process_application_commands(interaction)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 822, in process_application_commands
+    await self.invoke_application_command(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 1088, in invoke_application_command
+    await ctx.command.invoke(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 374, in invoke
+    await injected(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 124, in wrapped
+    ret = await coro(arg)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 974, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 40, in gen
+    img = gen_waifu(query=query,num_inference_steps=num_inference_steps,seed=seed,guidance_scale=guidance_scale)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/waifu_gen.py", line 32, in gen_waifu
+    pipe = pipe.to(device)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/pipeline_utils.py", line 196, in to
+    module.to(torch_device)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/nn/modules/module.py", line 987, in to
+    return self._apply(convert)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/nn/modules/module.py", line 639, in _apply
+    module._apply(fn)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/nn/modules/module.py", line 639, in _apply
+    module._apply(fn)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/nn/modules/module.py", line 662, in _apply
+    param_applied = fn(param)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/nn/modules/module.py", line 985, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+ 
+2022-11-04 03:58:56,358 - discord.gateway - WARNING - Shard ID None heartbeat blocked for more than 40 seconds.
+Loop thread traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 52, in <module>
+    run()
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 49, in run
+    client.run(botconfig['bot_setting']['bottoken'])
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 707, in run
+    loop.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 377, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 1141, in on_interaction
+    await self.process_application_commands(interaction)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 822, in process_application_commands
+    await self.invoke_application_command(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 1088, in invoke_application_command
+    await ctx.command.invoke(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 374, in invoke
+    await injected(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 124, in wrapped
+    ret = await coro(arg)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 974, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 40, in gen
+    img = gen_waifu(query=query,num_inference_steps=num_inference_steps,seed=seed,guidance_scale=guidance_scale)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/waifu_gen.py", line 36, in gen_waifu
+    image = pipe(prompt, guidance_scale=guidance_scale,
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/autograd/grad_mode.py", line 27, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/pipelines/stable_diffusion/pipeline_stable_diffusion.py", line 326, in __call__
+    noise_pred = self.unet(latent_model_input, t, encoder_hidden_states=text_embeddings).sample
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/models/unet_2d_condition.py", line 290, in forward
+    sample = self.conv_in(sample)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 463, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 459, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+ 
+2022-11-04 03:59:04,131 - discord.gateway - INFO - Timed out receiving packet. Attempting a reconnect. 
+2022-11-04 03:59:04,131 - discord.client - INFO - Got a request to RESUME the websocket. 
+2022-11-04 03:59:04,652 - discord.gateway - INFO - Shard ID None has sent the RESUME payload. 
+2022-11-04 03:59:04,926 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 366b63bf36fd4bda14c974b7c3ddd08f under trace ["gateway-prd-us-east1-d-935l",{"micros":603,"calls":["id_created",{"micros":0,"calls":[]},"session_lookup_time",{"micros":260,"calls":[]},"session_lookup_finished",{"micros":10,"calls":[]},"discord-sessions-blue-prd-2-274",{"micros":17}]}]. 
+2022-11-04 03:59:56,332 - discord.gateway - WARNING - Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 52, in <module>
+    run()
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 49, in run
+    client.run(botconfig['bot_setting']['bottoken'])
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 707, in run
+    loop.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 377, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 1141, in on_interaction
+    await self.process_application_commands(interaction)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 822, in process_application_commands
+    await self.invoke_application_command(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 1088, in invoke_application_command
+    await ctx.command.invoke(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 374, in invoke
+    await injected(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 124, in wrapped
+    ret = await coro(arg)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 974, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 40, in gen
+    img = gen_waifu(query=query,num_inference_steps=num_inference_steps,seed=seed,guidance_scale=guidance_scale)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/waifu_gen.py", line 13, in gen_waifu
+    pipe = StableDiffusionPipeline.from_pretrained(
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/pipeline_utils.py", line 517, in from_pretrained
+    loaded_sub_model = load_method(os.path.join(cached_folder, name), **loading_kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/modeling_utils.py", line 427, in from_pretrained
+    state_dict = load_state_dict(model_file)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/modeling_utils.py", line 71, in load_state_dict
+    return torch.load(checkpoint_file, map_location="cpu")
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/serialization.py", line 789, in load
+    return _load(opened_zipfile, map_location, pickle_module, **pickle_load_args)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/serialization.py", line 1131, in _load
+    result = unpickler.load()
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/serialization.py", line 1101, in persistent_load
+    load_tensor(dtype, nbytes, key, _maybe_decode_ascii(location))
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/serialization.py", line 1079, in load_tensor
+    storage = zip_file.get_storage_from_record(name, numel, torch.UntypedStorage).storage().untyped()
+ 
+2022-11-04 04:00:06,388 - discord.gateway - WARNING - Shard ID None heartbeat blocked for more than 20 seconds.
+Loop thread traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 52, in <module>
+    run()
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 49, in run
+    client.run(botconfig['bot_setting']['bottoken'])
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 707, in run
+    loop.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 377, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 1141, in on_interaction
+    await self.process_application_commands(interaction)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 822, in process_application_commands
+    await self.invoke_application_command(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 1088, in invoke_application_command
+    await ctx.command.invoke(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 374, in invoke
+    await injected(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 124, in wrapped
+    ret = await coro(arg)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 974, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 40, in gen
+    img = gen_waifu(query=query,num_inference_steps=num_inference_steps,seed=seed,guidance_scale=guidance_scale)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/waifu_gen.py", line 32, in gen_waifu
+    pipe = pipe.to(device)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/pipeline_utils.py", line 196, in to
+    module.to(torch_device)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/nn/modules/module.py", line 987, in to
+    return self._apply(convert)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/nn/modules/module.py", line 639, in _apply
+    module._apply(fn)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/nn/modules/module.py", line 639, in _apply
+    module._apply(fn)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/nn/modules/module.py", line 639, in _apply
+    module._apply(fn)
+  [Previous line repeated 3 more times]
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/nn/modules/module.py", line 688, in _apply
+    return self
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/nn/modules/module.py", line 985, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+ 
+2022-11-04 04:00:12,466 - discord.gateway - INFO - Websocket closed with 1000, cannot reconnect. 
+2022-11-04 04:00:12,467 - discord.client - ERROR - Attempting a reconnect in 1.24s 
+Traceback (most recent call last):
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 553, in connect
+    await self.ws.poll_event()
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/gateway.py", line 624, in poll_event
+    raise ConnectionClosed(
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 1000
+2022-11-04 04:00:14,203 - discord.gateway - INFO - Shard ID None has sent the RESUME payload. 
+2022-11-04 04:00:14,514 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 366b63bf36fd4bda14c974b7c3ddd08f under trace ["gateway-prd-us-east1-d-0525",{"micros":728,"calls":["id_created",{"micros":0,"calls":[]},"session_lookup_time",{"micros":228,"calls":[]},"session_lookup_finished",{"micros":13,"calls":[]},"discord-sessions-blue-prd-2-274",{"micros":36}]}]. 
+2022-11-04 04:02:28,022 - discord.gateway - WARNING - Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 52, in <module>
+    run()
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 49, in run
+    client.run(botconfig['bot_setting']['bottoken'])
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 707, in run
+    loop.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 377, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 1141, in on_interaction
+    await self.process_application_commands(interaction)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 822, in process_application_commands
+    await self.invoke_application_command(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 1088, in invoke_application_command
+    await ctx.command.invoke(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 374, in invoke
+    await injected(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 124, in wrapped
+    ret = await coro(arg)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 974, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 40, in gen
+    img = gen_waifu(query=query,num_inference_steps=num_inference_steps,seed=seed,guidance_scale=guidance_scale)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/waifu_gen.py", line 36, in gen_waifu
+    image = pipe(prompt, guidance_scale=guidance_scale,
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/autograd/grad_mode.py", line 27, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/pipelines/stable_diffusion/pipeline_stable_diffusion.py", line 334, in __call__
+    latents = self.scheduler.step(noise_pred, t, latents, **extra_step_kwargs).prev_sample
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/schedulers/scheduling_ddim.py", line 258, in step
+    alpha_prod_t_prev = self.alphas_cumprod[prev_timestep] if prev_timestep >= 0 else self.final_alpha_cumprod
+ 
+2022-11-04 04:02:32,616 - discord.gateway - INFO - Websocket closed with 1000, cannot reconnect. 
+2022-11-04 04:02:32,617 - discord.client - ERROR - Attempting a reconnect in 0.19s 
+Traceback (most recent call last):
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 553, in connect
+    await self.ws.poll_event()
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/gateway.py", line 624, in poll_event
+    raise ConnectionClosed(
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 1000
+2022-11-04 04:02:33,306 - discord.gateway - INFO - Shard ID None has sent the RESUME payload. 
+2022-11-04 04:02:33,575 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 366b63bf36fd4bda14c974b7c3ddd08f under trace ["gateway-prd-us-east1-c-5v7x",{"micros":845,"calls":["id_created",{"micros":0,"calls":[]},"session_lookup_time",{"micros":344,"calls":[]},"session_lookup_finished",{"micros":13,"calls":[]},"discord-sessions-blue-prd-2-274",{"micros":21}]}]. 
+2022-11-04 04:03:24,575 - discord.gateway - WARNING - Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 52, in <module>
+    run()
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 49, in run
+    client.run(botconfig['bot_setting']['bottoken'])
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 707, in run
+    loop.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 377, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 1141, in on_interaction
+    await self.process_application_commands(interaction)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 822, in process_application_commands
+    await self.invoke_application_command(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 1088, in invoke_application_command
+    await ctx.command.invoke(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 374, in invoke
+    await injected(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 124, in wrapped
+    ret = await coro(arg)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 974, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 40, in gen
+    img = gen_waifu(query=query,num_inference_steps=num_inference_steps,seed=seed,guidance_scale=guidance_scale)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/waifu_gen.py", line 13, in gen_waifu
+    pipe = StableDiffusionPipeline.from_pretrained(
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/pipeline_utils.py", line 517, in from_pretrained
+    loaded_sub_model = load_method(os.path.join(cached_folder, name), **loading_kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/modeling_utils.py", line 428, in from_pretrained
+    model, missing_keys, unexpected_keys, mismatched_keys, error_msgs = cls._load_pretrained_model(
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/modeling_utils.py", line 511, in _load_pretrained_model
+    error_msgs = _load_state_dict_into_model(model_to_load, state_dict)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/modeling_utils.py", line 110, in _load_state_dict_into_model
+    load(model_to_load)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/modeling_utils.py", line 108, in load
+    load(child, prefix + name + ".")
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/modeling_utils.py", line 108, in load
+    load(child, prefix + name + ".")
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/modeling_utils.py", line 108, in load
+    load(child, prefix + name + ".")
+  [Previous line repeated 2 more times]
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/modeling_utils.py", line 104, in load
+    module._load_from_state_dict(*args)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1568, in _load_from_state_dict
+    param.copy_(input_param)
+ 
+2022-11-04 04:03:34,877 - discord.gateway - WARNING - Shard ID None heartbeat blocked for more than 20 seconds.
+Loop thread traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 52, in <module>
+    run()
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 49, in run
+    client.run(botconfig['bot_setting']['bottoken'])
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 707, in run
+    loop.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 377, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 1141, in on_interaction
+    await self.process_application_commands(interaction)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 822, in process_application_commands
+    await self.invoke_application_command(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 1088, in invoke_application_command
+    await ctx.command.invoke(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 374, in invoke
+    await injected(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 124, in wrapped
+    ret = await coro(arg)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 974, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 40, in gen
+    img = gen_waifu(query=query,num_inference_steps=num_inference_steps,seed=seed,guidance_scale=guidance_scale)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/waifu_gen.py", line 13, in gen_waifu
+    pipe = StableDiffusionPipeline.from_pretrained(
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/pipeline_utils.py", line 517, in from_pretrained
+    loaded_sub_model = load_method(os.path.join(cached_folder, name), **loading_kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2230, in from_pretrained
+    model = cls(config, *model_args, **model_kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/transformers/models/clip/modeling_clip.py", line 695, in __init__
+    self.text_model = CLIPTextTransformer(config)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/transformers/models/clip/modeling_clip.py", line 605, in __init__
+    self.embeddings = CLIPTextEmbeddings(config)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/transformers/models/clip/modeling_clip.py", line 151, in __init__
+    self.register_buffer("position_ids", torch.arange(config.max_position_embeddings).expand((1, -1)))
+ 
+2022-11-04 04:03:45,048 - discord.gateway - WARNING - Shard ID None heartbeat blocked for more than 30 seconds.
+Loop thread traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 52, in <module>
+    run()
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 49, in run
+    client.run(botconfig['bot_setting']['bottoken'])
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 707, in run
+    loop.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 377, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 1141, in on_interaction
+    await self.process_application_commands(interaction)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 822, in process_application_commands
+    await self.invoke_application_command(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 1088, in invoke_application_command
+    await ctx.command.invoke(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 374, in invoke
+    await injected(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 124, in wrapped
+    ret = await coro(arg)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 974, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 40, in gen
+    img = gen_waifu(query=query,num_inference_steps=num_inference_steps,seed=seed,guidance_scale=guidance_scale)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/waifu_gen.py", line 36, in gen_waifu
+    image = pipe(prompt, guidance_scale=guidance_scale,
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/autograd/grad_mode.py", line 27, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/pipelines/stable_diffusion/pipeline_stable_diffusion.py", line 326, in __call__
+    noise_pred = self.unet(latent_model_input, t, encoder_hidden_states=text_embeddings).sample
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/schedulers/scheduling_ddim.py", line 296, in step
+    return DDIMSchedulerOutput(prev_sample=prev_sample, pred_original_sample=pred_original_sample)
+ 
+2022-11-04 04:03:54,127 - discord.gateway - INFO - Websocket closed with 1000, cannot reconnect. 
+2022-11-04 04:03:54,127 - discord.client - ERROR - Attempting a reconnect in 3.52s 
+Traceback (most recent call last):
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 553, in connect
+    await self.ws.poll_event()
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/gateway.py", line 624, in poll_event
+    raise ConnectionClosed(
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 1000
+2022-11-04 04:03:58,084 - discord.gateway - INFO - Shard ID None has sent the RESUME payload. 
+2022-11-04 04:03:58,354 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 366b63bf36fd4bda14c974b7c3ddd08f under trace ["gateway-prd-us-east1-d-gbdx",{"micros":669,"calls":["id_created",{"micros":0,"calls":[]},"session_lookup_time",{"micros":273,"calls":[]},"session_lookup_finished",{"micros":15,"calls":[]},"discord-sessions-blue-prd-2-274",{"micros":34}]}]. 
+2022-11-04 04:04:49,364 - discord.gateway - WARNING - Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 52, in <module>
+    run()
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 49, in run
+    client.run(botconfig['bot_setting']['bottoken'])
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 707, in run
+    loop.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 377, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 1141, in on_interaction
+    await self.process_application_commands(interaction)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 822, in process_application_commands
+    await self.invoke_application_command(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 1088, in invoke_application_command
+    await ctx.command.invoke(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 374, in invoke
+    await injected(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 124, in wrapped
+    ret = await coro(arg)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 974, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 40, in gen
+    img = gen_waifu(query=query,num_inference_steps=num_inference_steps,seed=seed,guidance_scale=guidance_scale)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/waifu_gen.py", line 13, in gen_waifu
+    pipe = StableDiffusionPipeline.from_pretrained(
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/pipeline_utils.py", line 517, in from_pretrained
+    loaded_sub_model = load_method(os.path.join(cached_folder, name), **loading_kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/modeling_utils.py", line 427, in from_pretrained
+    state_dict = load_state_dict(model_file)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/modeling_utils.py", line 71, in load_state_dict
+    return torch.load(checkpoint_file, map_location="cpu")
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/serialization.py", line 789, in load
+    return _load(opened_zipfile, map_location, pickle_module, **pickle_load_args)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/serialization.py", line 1131, in _load
+    result = unpickler.load()
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/serialization.py", line 1101, in persistent_load
+    load_tensor(dtype, nbytes, key, _maybe_decode_ascii(location))
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/serialization.py", line 1079, in load_tensor
+    storage = zip_file.get_storage_from_record(name, numel, torch.UntypedStorage).storage().untyped()
+ 
+2022-11-04 04:04:59,365 - discord.gateway - WARNING - Shard ID None heartbeat blocked for more than 20 seconds.
+Loop thread traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 52, in <module>
+    run()
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 49, in run
+    client.run(botconfig['bot_setting']['bottoken'])
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 707, in run
+    loop.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 377, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 1141, in on_interaction
+    await self.process_application_commands(interaction)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 822, in process_application_commands
+    await self.invoke_application_command(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 1088, in invoke_application_command
+    await ctx.command.invoke(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 374, in invoke
+    await injected(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 124, in wrapped
+    ret = await coro(arg)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 974, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 40, in gen
+    img = gen_waifu(query=query,num_inference_steps=num_inference_steps,seed=seed,guidance_scale=guidance_scale)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/waifu_gen.py", line 13, in gen_waifu
+    pipe = StableDiffusionPipeline.from_pretrained(
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/pipeline_utils.py", line 517, in from_pretrained
+    loaded_sub_model = load_method(os.path.join(cached_folder, name), **loading_kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/modeling_utils.py", line 427, in from_pretrained
+    state_dict = load_state_dict(model_file)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/modeling_utils.py", line 71, in load_state_dict
+    return torch.load(checkpoint_file, map_location="cpu")
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/serialization.py", line 789, in load
+    return _load(opened_zipfile, map_location, pickle_module, **pickle_load_args)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/serialization.py", line 1131, in _load
+    result = unpickler.load()
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/serialization.py", line 1101, in persistent_load
+    load_tensor(dtype, nbytes, key, _maybe_decode_ascii(location))
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/serialization.py", line 1079, in load_tensor
+    storage = zip_file.get_storage_from_record(name, numel, torch.UntypedStorage).storage().untyped()
+ 
+2022-11-04 04:05:09,567 - discord.gateway - WARNING - Shard ID None heartbeat blocked for more than 30 seconds.
+Loop thread traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 52, in <module>
+    run()
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 49, in run
+    client.run(botconfig['bot_setting']['bottoken'])
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 707, in run
+    loop.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 377, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 1141, in on_interaction
+    await self.process_application_commands(interaction)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 822, in process_application_commands
+    await self.invoke_application_command(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 1088, in invoke_application_command
+    await ctx.command.invoke(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 374, in invoke
+    await injected(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 124, in wrapped
+    ret = await coro(arg)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 974, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 40, in gen
+    img = gen_waifu(query=query,num_inference_steps=num_inference_steps,seed=seed,guidance_scale=guidance_scale)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/waifu_gen.py", line 36, in gen_waifu
+    image = pipe(prompt, guidance_scale=guidance_scale,
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/autograd/grad_mode.py", line 27, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/pipelines/stable_diffusion/pipeline_stable_diffusion.py", line 326, in __call__
+    noise_pred = self.unet(latent_model_input, t, encoder_hidden_states=text_embeddings).sample
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/models/unet_2d_condition.py", line 322, in forward
+    sample = upsample_block(
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/models/unet_blocks.py", line 1155, in forward
+    return hidden_states
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/models/attention.py", line 165, in forward
+    return hidden_states + residual
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/models/attention.py", line 214, in forward
+    return hidden_states
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/models/attention.py", line 287, in forward
+    return self.to_out(hidden_states)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+ 
+2022-11-04 04:05:19,639 - discord.gateway - WARNING - Shard ID None heartbeat blocked for more than 40 seconds.
+Loop thread traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 52, in <module>
+    run()
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 49, in run
+    client.run(botconfig['bot_setting']['bottoken'])
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 707, in run
+    loop.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 377, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 1141, in on_interaction
+    await self.process_application_commands(interaction)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 822, in process_application_commands
+    await self.invoke_application_command(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/bot.py", line 1088, in invoke_application_command
+    await ctx.command.invoke(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 374, in invoke
+    await injected(ctx)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 124, in wrapped
+    ret = await coro(arg)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/commands/core.py", line 974, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/__main__.py", line 40, in gen
+    img = gen_waifu(query=query,num_inference_steps=num_inference_steps,seed=seed,guidance_scale=guidance_scale)
+  File "/mnt/vault/sharessd-sync/code/python/utachi brother/src/waifu_gen.py", line 36, in gen_waifu
+    image = pipe(prompt, guidance_scale=guidance_scale,
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/torch/autograd/grad_mode.py", line 27, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/pipelines/stable_diffusion/pipeline_stable_diffusion.py", line 334, in __call__
+    latents = self.scheduler.step(noise_pred, t, latents, **extra_step_kwargs).prev_sample
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/diffusers/schedulers/scheduling_ddim.py", line 260, in step
+    beta_prod_t = 1 - alpha_prod_t
+ 
+2022-11-04 04:05:26,657 - discord.gateway - INFO - Websocket closed with 1000, cannot reconnect. 
+2022-11-04 04:05:26,657 - discord.client - ERROR - Attempting a reconnect in 1.12s 
+Traceback (most recent call last):
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/client.py", line 553, in connect
+    await self.ws.poll_event()
+  File "/home/pooh/.local/share/virtualenvs/utachi_brother-wMdpZdkI/lib/python3.10/site-packages/discord/gateway.py", line 624, in poll_event
+    raise ConnectionClosed(
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 1000
+2022-11-04 04:05:29,211 - discord.gateway - INFO - Shard ID None has sent the RESUME payload. 
+2022-11-04 04:05:29,481 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 366b63bf36fd4bda14c974b7c3ddd08f under trace ["gateway-prd-us-east1-b-9m12",{"micros":669,"calls":["id_created",{"micros":0,"calls":[]},"session_lookup_time",{"micros":222,"calls":[]},"session_lookup_finished",{"micros":14,"calls":[]},"discord-sessions-blue-prd-2-274",{"micros":36}]}]. 
+2022-11-04 04:28:02,786 - discord.client - INFO - Got a request to RESUME the websocket. 
+2022-11-04 04:28:04,708 - discord.gateway - INFO - Shard ID None has sent the RESUME payload. 
+2022-11-04 04:28:04,972 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 366b63bf36fd4bda14c974b7c3ddd08f under trace ["gateway-prd-us-east1-b-5nwg",{"micros":477,"calls":["id_created",{"micros":0,"calls":[]},"session_lookup_time",{"micros":215,"calls":[]},"session_lookup_finished",{"micros":9,"calls":[]},"discord-sessions-blue-prd-2-274",{"micros":17}]}]. 
+2022-11-04 05:16:04,123 - discord.client - INFO - Got a request to RESUME the websocket. 
+2022-11-04 05:16:04,650 - discord.gateway - INFO - Shard ID None has sent the RESUME payload. 
+2022-11-04 05:16:04,915 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 366b63bf36fd4bda14c974b7c3ddd08f under trace ["gateway-prd-us-east1-c-4t74",{"micros":507,"calls":["id_created",{"micros":0,"calls":[]},"session_lookup_time",{"micros":228,"calls":[]},"session_lookup_finished",{"micros":6,"calls":[]},"discord-sessions-blue-prd-2-274",{"micros":16}]}]. 
+2022-11-04 07:09:14,686 - discord.client - INFO - Got a request to RESUME the websocket. 
+2022-11-04 07:09:15,273 - discord.gateway - INFO - Shard ID None has sent the RESUME payload. 
+2022-11-04 07:09:15,550 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 366b63bf36fd4bda14c974b7c3ddd08f under trace ["gateway-prd-us-east1-c-dbtp",{"micros":792,"calls":["id_created",{"micros":0,"calls":[]},"session_lookup_time",{"micros":340,"calls":[]},"session_lookup_finished",{"micros":11,"calls":[]},"discord-sessions-blue-prd-2-274",{"micros":17}]}]. 
+2022-11-04 07:54:41,709 - discord.client - INFO - Got a request to RESUME the websocket. 
+2022-11-04 07:54:54,257 - discord.gateway - INFO - Shard ID None has sent the RESUME payload. 
+2022-11-04 07:54:54,530 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 366b63bf36fd4bda14c974b7c3ddd08f under trace ["gateway-prd-us-east1-c-77m4",{"micros":647,"calls":["id_created",{"micros":0,"calls":[]},"session_lookup_time",{"micros":286,"calls":[]},"session_lookup_finished",{"micros":7,"calls":[]},"discord-sessions-blue-prd-2-274",{"micros":17}]}]. 
+2022-11-04 09:05:26,632 - discord.client - INFO - Cleaning up tasks. 
+2022-11-04 09:05:26,632 - discord.client - INFO - Cleaning up after 1 tasks. 
+2022-11-04 09:05:26,898 - discord.client - INFO - All tasks finished cancelling. 
+2022-11-04 09:05:26,898 - discord.client - INFO - Closing the event loop. 

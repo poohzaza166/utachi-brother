@@ -1,0 +1,4 @@
+bot_setting:
+    loglevel: info
+    bottoken: 
+    botprefix: "+"

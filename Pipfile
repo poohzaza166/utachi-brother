@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pycord = "*"
+diffusers = "==0.5.1"
+transformers = "*"
+torchvision = "*"
+torchaudio = "*"
+scipy = "*"
+ftfy = "*"
+gradio = "*"
+ipywidgets = "<8,>=7"
+datasets = "*"
+omegaconf = "*"
+pytorch-lightning = "*"
+cog = "*"
+py-cord = {extras = ["speed"], version = "*"}
+onnxruntime = "*"
+torch = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
